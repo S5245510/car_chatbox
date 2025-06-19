@@ -3,6 +3,8 @@
 Ever wished you could just ask questions about your car manual and get direct answers? This chatbot does exactly that. It intelligently scans your car PDFs (manuals, service guides, etc.), understands the content, and answers your queries with relevant, sourced responses.
 
 Think of it as your personal car knowledge assistant—powered by Retrieval-Augmented Generation (RAG), a vector database, and flexible Large Language Models (LLMs).
+
+![Chatbot Demo](1.png)
 ________________________________________________________________________________________________________
 🔧 Features
 Document Ingestion – Easily load your own PDF manuals into a searchable knowledge base
