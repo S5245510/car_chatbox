@@ -3,8 +3,9 @@
 Ever wished you could just ask questions about your car manual and get direct answers? This chatbot does exactly that. It intelligently scans your car PDFs (manuals, service guides, etc.), understands the content, and answers your queries with relevant, sourced responses.
 
 Think of it as your personal car knowledge assistant—powered by Retrieval-Augmented Generation (RAG), a vector database, and flexible Large Language Models (LLMs).
+![image](https://github.com/user-attachments/assets/3bfac1eb-ac15-456c-9aae-2391ae05d9b3)
 
-![Chatbot Demo](1.png)
+
 ________________________________________________________________________________________________________
 🔧 Features
 Document Ingestion – Easily load your own PDF manuals into a searchable knowledge base
@@ -12,10 +13,15 @@ Document Ingestion – Easily load your own PDF manuals into a searchable knowle
 Vector Store (Chroma) – Fast, semantic document retrieval
 
 AI Integration – Plug in various LLMs for flexible deployment (default: Ollama)
+![Chatbot Demo](2.png)
+
+![Chatbot Demo](3.png)
+![Chatbot Demo](4.png)
 
 Web GUI – Intuitive chat interface with real-time responses
 
 Source Citations – Shows where answers were found (document + page) So no FAKE and MAKEUP AI Answer.
+![Chatbot Demo](1.png)
 
 ________________________________________________________________________________________________________
 
