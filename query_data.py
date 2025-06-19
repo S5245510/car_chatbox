@@ -1,5 +1,5 @@
 import argparse
-from langchain.vectorstores.chroma import Chroma
+from langchain_community.vectorstores.chroma import Chroma
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.llms.ollama import Ollama
 
@@ -8,16 +8,20 @@ from get_embedding_function import get_embedding_function
 CHROMA_PATH = "chroma"
 
 PROMPT_TEMPLATE = """
-Answer the question based only on the following context:
+You are a knowledgeable car specialist. Answer the question based only on the following context:
 
 {context}
 
 ---
 
-Answer the question based on the above context: {question}
+User's Question: {question}
+
+---
+
+Provide a clear and comprehensive answer, including any relevant troubleshooting steps, show information is from what document and page..
 """
 
-
+  
 def main():
     # Create CLI.
     parser = argparse.ArgumentParser()
@@ -40,13 +44,13 @@ def query_rag(query_text: str):
     prompt = prompt_template.format(context=context_text, question=query_text)
     # print(prompt)
 
-    model = Ollama(model="mistral")
+    model = Ollama(model="llama3.1:8b")
     response_text = model.invoke(prompt)
 
     sources = [doc.metadata.get("id", None) for doc, _score in results]
     formatted_response = f"Response: {response_text}\nSources: {sources}"
-    print(formatted_response)
-    return response_text
+    print(formatted_response) # Still print for console, but now return the full string
+    return formatted_response # Return the complete formatted response
 
 
 if __name__ == "__main__":
